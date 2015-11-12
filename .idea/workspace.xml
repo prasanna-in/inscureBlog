@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="73424875-ea67-4d57-bc17-13549ddc705a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/blog_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/blog_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/blog/index.html.slim" afterPath="$PROJECT_DIR$/app/views/blog/index.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/blog/new.html.slim" afterPath="$PROJECT_DIR$/app/views/blog/new.html.slim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/blog/show.html.slim" afterPath="$PROJECT_DIR$/app/views/blog/show.html.slim" />
     </list>
     <ignored path="inscureBlog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,8 +32,8 @@
       <file leaf-file-name="blog_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/blog_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15283842">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.13100436">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -594,8 +591,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/blog_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15283842">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.13100436">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
           <folding />
         </state>
       </provider>

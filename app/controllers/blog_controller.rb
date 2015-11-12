@@ -4,7 +4,7 @@ class BlogController < ApplicationController
   end
 
   def new
-    # @blog = Blog.new
+    @blog = Blog.new
   end
 
   def show
