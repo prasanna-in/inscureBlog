@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Blog, :type => :model do
 
   describe '#valid?' do
-    subject { create :blog, name: 'Name', body: 'Some content' }
+    subject { create :blog, title: 'Name', body: 'Some content' }
 
     it { expect(subject.valid?).to be }
 
