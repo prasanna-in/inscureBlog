@@ -1,0 +1,22 @@
+= form_for(:blog, { url: '/blog' }) do |f|
+  h1 Write your new Blog !!
+
+  .field#field-title
+    ul.errorlist
+    .field-wrapper
+      .indicator
+      = f.text_field :title, placeholder: 'Title'
+
+  .field#field-body
+    ul.errorlist
+    .field-wrapper
+      .indicator
+      = f.text_area :body, placeholder: 'Body'
+
+  .field#field-links
+    ul.errorlist
+    .field-wrapper
+      .indicator
+      = f.text_area :links, placeholder: 'Link'
+  .submit
+    = f.submit 'Submit', class: 'button'

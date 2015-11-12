@@ -1,5 +1,5 @@
+h1 Exciting Blogs of Insecure
 p
-  This is the page to display the index page for blog
   - unless @blogs.empty?
     table
       - @blogs.each do |blog|
@@ -7,3 +7,10 @@ p
           =link_to blog_path(blog.id) do
             =blog.title
             br
+    table
+      tr
+        = link_to 'New Blog', new_blog_path
+br
+    table
+      tr
+        p Total Blogs Written : #{@blogs.count}
