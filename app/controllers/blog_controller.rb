@@ -7,6 +7,6 @@ class BlogController < ApplicationController
   end
   def show
     @blog = Blog.find(params[:id])
-    @links = @blog.links.split(":")
+    @links = @blog.links
   end
 end
