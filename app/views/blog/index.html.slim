@@ -1,0 +1,9 @@
+p
+  This is the page to display the index page for blog
+  - unless @blogs.empty?
+    table
+      - @blogs.each do |blog|
+        tr
+          =link_to blog_path(blog.id) do
+            =blog.title
+            br
