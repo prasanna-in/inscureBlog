@@ -10,5 +10,5 @@ div class="navbar navbar-default navbar-static-top" role="navigation"
 
     div class="navbar-collapse collapse"
       ul class="nav navbar-nav"
-        - [{path: root_path, label: 'Home'}, {path: new_blog_path, label: 'New Blog'}, {path: '', label: 'About'}].each do |path_info|
+        - [{path: root_path, label: 'Home'}, {path: blog_index_path, label: 'Blogs'}, {path: new_blog_path, label: 'New Blog'}, {path: about_index_path, label: 'About'}].each do |path_info|
           li class=(path_info[:path] == request.env['PATH_INFO'] ? 'active' : '') : a href="#{path_info[:path]}" #{path_info[:label]}

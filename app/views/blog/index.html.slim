@@ -1,16 +1,16 @@
-h1 Exciting Blogs of Insecure
-p
+div.page-header
+  h1 Exciting Blogs of Insecure
+div
   - unless @blogs.empty?
     table
       - @blogs.each do |blog|
-        tr
-          =link_to blog_path(blog.id) do
-            =blog.title
-            br
-    table
-      tr
-        = link_to 'New Blog', new_blog_path
+        tr: td
+            li
+              = link_to blog.title, blog_path(blog.id)
+
 br
-    table
-      tr
-        p Total Blogs Written : #{@blogs.count}
+div.alert.alert-info
+    strong Total Blogs:
+      #{@blogs.count}
+
+a href="#" class="btn btn-primary" role="button" New Blog

@@ -1,8 +1,12 @@
-h1
-  =@blog.title
+div.page-header
+  h1 =@blog.title
+div
+  =@blog.body
+
+div
   br
-p
-    =@blog.body
-br
-    =link_to @links, target: "_blank" , class:"dummy" do
-     -@links
+  br
+  b Links:
+  br
+  br
+  = link_to @links, target: "_blank"
