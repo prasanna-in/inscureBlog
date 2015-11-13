@@ -1,0 +1,14 @@
+div class="navbar navbar-default navbar-static-top" role="navigation"
+  div class="container"
+    div class="navbar-header"
+      button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"
+        span class="sr-only" Toggle navigation
+        span class="icon-bar"
+        span class="icon-bar"
+        span class="icon-bar"
+      a.navbar-brand Insecure Blog
+
+    div class="navbar-collapse collapse"
+      ul class="nav navbar-nav"
+        - [{path: root_path, label: 'Home'}, {path: new_blog_path, label: 'New Blog'}, {path: '', label: 'About'}].each do |path_info|
+          li class=(path_info[:path] == request.env['PATH_INFO'] ? 'active' : '') : a href="#{path_info[:path]}" #{path_info[:label]}

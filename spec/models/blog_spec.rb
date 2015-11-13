@@ -8,11 +8,11 @@ RSpec.describe Blog, :type => :model do
     it { expect(subject.valid?).to be }
 
     context 'name' do
-      let(:name) { 'Jon' }
-      subject { build :blog, title: name }
+      let(:title) { 'Jon' }
+      subject { build :blog, title: title }
 
       context 'invalid if empty' do
-        let(:name) { '' }
+        let(:title) { '' }
 
         it 'error' do
           expect(subject.valid?).to be(false)

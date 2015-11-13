@@ -1,22 +1,21 @@
-= form_for(:blog, { url: '/blog' }) do |f|
+div.page-header
   h1 Write your new Blog !!
+= form_for(:blog, { url: '/blog' }) do |f|
+  table class='table table-hover table-responsive table-bordered'
 
-  .field#field-title
-    ul.errorlist
-    .field-wrapper
-      .indicator
-      = f.text_field :title, placeholder: 'Title'
-
-  .field#field-body
-    ul.errorlist
-    .field-wrapper
-      .indicator
-      = f.text_area :body, placeholder: 'Body'
-
-  .field#field-links
-    ul.errorlist
-    .field-wrapper
-      .indicator
-      = f.text_area :links, placeholder: 'Link'
-  .submit
-    = f.submit 'Submit', class: 'button'
+    tr
+      td Title
+      td
+        = f.text_field :title, placeholder: 'Title', class: 'form-control', required: 'required'
+    tr
+      td Body
+      td
+        = f.text_area :body, placeholder: 'Body', class: 'form-control'
+    tr
+      td Links
+      td
+        = f.text_area(:links, placeholder: 'Links', class: 'form-control')
+    tr
+      td
+      td
+        button type="submit" class="btn btn-primary": span class="glyphicon" Submit
