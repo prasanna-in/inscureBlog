@@ -5,3 +5,26 @@ $navbar-default-bg: #312312;
 $light-orange: #ff8c00;
 $navbar-default-color: $light-orange;
 
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+
+  input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+  }
+}
+.progress {
+  margin-bottom: 0;
+}
+
+.new_blog {
+  .table th, .table td {
+    border-top: none !important;
+  }
+}

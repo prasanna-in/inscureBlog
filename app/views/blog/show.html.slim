@@ -3,11 +3,21 @@ div.page-header
 div
   =@blog.body
 
-div
+- if @blog.links.present?
+  div
+    br
+    br
+    b Links:
+    br
+    br
+    = link_to @links, target: "_blank" do
+      -@links
+
+- if @blog.documents.present?
   br
-  br
-  b Links:
-  br
-  br
-  = link_to @links, target: "_blank" do
-    -@links
+  div
+    strong Attachments:
+    br
+    - @blog.documents.each do |document|
+      li
+        = link_to document.file_name, document_path(document.id), target: '_blank'

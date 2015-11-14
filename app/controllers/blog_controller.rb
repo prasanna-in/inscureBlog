@@ -23,7 +23,7 @@ class BlogController < ApplicationController
   end
 
   def blog_params
-    params.require(:blog).permit(:title,:body,:links)
+    params.require(:blog).permit(:title, :body, :links, :documents_attributes, documents_attributes: [])
   end
 
 end
