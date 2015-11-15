@@ -39,8 +39,9 @@ $(function () {
                 return xhr;
             },
             success: function (data) {
+                var templateData = _.merge(data, { file_name: formData.filename });
                 $("#uploadedFiles").children().last().remove();
-                $("#uploadedFiles").append($("#fileUploadItemTemplate").tmpl(data));
+                $("#uploadedFiles").append($("#fileUploadItemTemplate").tmpl(templateData));
                 $('button[name="fileUploadCloseButton"]').click(deleteDocument);
                 //$("#uploadFile").closest("form").trigger("reset");
             },

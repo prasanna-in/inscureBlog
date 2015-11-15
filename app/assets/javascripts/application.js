@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-tmpl
+//= require lodash
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .

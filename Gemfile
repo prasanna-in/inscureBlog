@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'jquery-tmpl-rails', '~> 1.1'
 gem 'slim-rails', '~> 3.0', '>= 3.0.1'
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'lodash-rails', '~> 3.10'
 
 gem 'turbolinks' # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'jbuilder', '~> 2.0' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
