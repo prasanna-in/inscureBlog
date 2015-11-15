@@ -40,15 +40,15 @@ $(function () {
             },
             success: function (data) {
                 var templateData = _.merge(data, { file_name: formData.filename });
+                var uploadedFileTemplate = $("#fileUploadItemTemplate").tmpl(templateData);
+                uploadedFileTemplate.find('span[name="fileInfo"]').html(templateData.file_name + "(" + templateData.file_size + ")");
                 $("#uploadedFiles").children().last().remove();
-                $("#uploadedFiles").append($("#fileUploadItemTemplate").tmpl(templateData));
+                $("#uploadedFiles").append(uploadedFileTemplate);
                 $('button[name="fileUploadCloseButton"]').click(deleteDocument);
-                //$("#uploadFile").closest("form").trigger("reset");
             },
             error: function () {
                 $("#fileUploadError").removeClass("hide").text("An error occurred!");
                 $("#uploadedFiles").children().last().remove();
-                //$("#uploadFile").closest("form").trigger("reset");
             },
             data: formData,
             cache: false,

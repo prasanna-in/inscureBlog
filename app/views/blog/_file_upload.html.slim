@@ -7,8 +7,8 @@ script id="fileUploadItemTemplate" type="text/x-jquery-tmpl"
   div class="uploaded_item list-group-item"
     input type='hidden' name='blog[documents_attributes][]' value='${document_id}'
     button type="button" name="fileUploadCloseButton" value='${document_id}' class="close" &times;
-    span.glyphicon.glyphicon-file
-    |  ${file_name} (${file_size})
+    span.glyphicon.glyphicon-file name='fileInfo'
+    /|  ${file_name} (${file_size})
 
 div#fileUpload.fileUpload.btn.btn-default
   span.glyphicon.glyphicon-upload
