@@ -1,0 +1,1 @@
+InsecureBlog::Application.config.secret_key_base = 'c831519fe04be558b03294df519115b9bc637ab3909155df68584ec2660e1cec0860a47fa62ddfef37f5726c8b22f3043d2ddaed09c7df3917691a8fc3cbe470'
