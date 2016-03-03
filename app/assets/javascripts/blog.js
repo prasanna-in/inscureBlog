@@ -2,10 +2,11 @@ $(function () {
     $('#fileUpload').click(function () {
         $("#uploadFile").click();
     });
-
+                
     $("#uploadFile").change(function () {
         var formData = new FormData();
-        formData.append('file', this.files[0]);
+        var file = this.files[0];
+        formData.append('file', file);
 
         $("#uploadedFiles").append($("#fileUploadProgressTemplate").tmpl());
         $("#fileUploadError").addClass("hide");
@@ -39,11 +40,12 @@ $(function () {
                 return xhr;
             },
             success: function (data) {
-                var templateData = _.merge(data, { file_name: formData.filename });
+                var templateData = _.merge(data, { file_name: file.name });
                 var uploadedFileTemplate = $("#fileUploadItemTemplate").tmpl(templateData);
                 uploadedFileTemplate.find('span[name="fileInfo"]').html(templateData.file_name + "(" + templateData.file_size + ")");
                 $("#uploadedFiles").children().last().remove();
                 $("#uploadedFiles").append(uploadedFileTemplate);
+
                 $('button[name="fileUploadCloseButton"]').click(deleteDocument);
             },
             error: function () {
